@@ -1,28 +1,26 @@
-
 const express = require('express');
-const router = express.Router();
-router.get('./treefacts', (req, res) => {
-  res.json({ message: 'This is my Tree api route' });
-});
+const { getTreeFacts } = require('./treefacts'); 
 
-module.exports = router;
-
-router.get('./treefacts/:id', (req, res) => {
-  const treeId = req.params.id;
-  res.json({ message: `Tree ID: ${treeId}` });
-});
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
 
+app.get('/api/trees', (req, res) => {
+  
+  getTreeFacts((err, treeFacts) => {
+    if (err) {
+      console.error('Error getting tree facts:', err);
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
 
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello, this is your local server!');
+  
+    res.json(treeFacts);
+  });
 });
 
-const port = 3000;
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
