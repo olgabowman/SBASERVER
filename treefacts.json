@@ -1,0 +1,42 @@
+{
+    "trees": [
+      {
+        "id": 1,
+        "name": "Oak",
+        "scientificName": "Quercus",
+        "family": "Fagaceae",
+        "description": "Oak trees are known for their strong and durable wood. They are common in many parts of the world.",
+        "height": "Up to 100 feet",
+        "lifespan": "Several hundred years",
+        "uses": ["Lumber", "Furniture", "Firewood"],
+        "benefits": ["Oxygen production", "Wildlife habitat"],
+        "imageURL": "https://example.com/oak.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Maple",
+        "scientificName": "Acer",
+        "family": "Sapindaceae",
+        "description": "Maple trees are known for their distinctive leaves and are often associated with autumn foliage.",
+        "height": "Up to 80 feet",
+        "lifespan": "Over 100 years",
+        "uses": ["Maple syrup", "Woodcraft"],
+        "benefits": ["Shade", "Erosion prevention"],
+        "imageURL": "https://example.com/maple.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Pine",
+        "scientificName": "Pinus",
+        "family": "Pinaceae",
+        "description": "Pine trees are evergreen and are widely used for timber and paper production.",
+        "height": "Varies by species",
+        "lifespan": "Centuries",
+        "uses": ["Timber", "Paper", "Resin"],
+        "benefits": ["Air purification", "Windbreaks"],
+        "imageURL": "https://example.com/pine.jpg"
+      }
+      
+    ]
+  }
+  
